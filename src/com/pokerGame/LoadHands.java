@@ -1,12 +1,12 @@
-/**
+package com.pokerGame; /**
  * TODO:
  * Make the following Classes
- * CheckPair
- * Check2Pair
- * CheckFullHouse
- * CheckThreeOfAKind
- * CheckFourOfAKind
- * CheckStraight
+ * CheckPair-Mike
+ * Check2Pair-Benjamin
+ * CheckFullHouse-Mike
+ * CheckThreeOfAKind-Benjamin
+ * CheckFourOfAKind-Mike
+ * CheckStraight-Mike
  * CheckHighCard
  * CheckFlush
  * CheckFinal
@@ -21,6 +21,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import com.pokerGame.Hand;
 
 
 
@@ -68,6 +69,9 @@ public class LoadHands {
                 List<String> lineArray = new ArrayList(Arrays.asList(inputLine.split(" ")));
                 p1.clear();
                 p2.clear();
+
+
+
                 //System.out.println(lineArray.get(0));
                // System.out.println(inputLine);
                 for (int i = 0; i < lineArray.size(); i++){
@@ -81,6 +85,10 @@ public class LoadHands {
                     }
 
                 }
+                Hand P1 = new Hand(p1);
+
+                P1.convertList();
+
                 System.out.println("p1");
                 System.out.println(p1);
                 System.out.println("P2");
