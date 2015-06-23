@@ -86,13 +86,13 @@ public class LoadHands {
 
                 }
                 Hand P1 = new Hand(p1);
+                Hand P2 = new Hand(p2);
 
+                System.out.println("p1 = "+ p1);
                 P1.convertList();
+                System.out.println("p2 = " + p2);
+                P2.convertList();
 
-                System.out.println("p1");
-                System.out.println(p1);
-                System.out.println("P2");
-                System.out.println(p2);
             }
         } catch (IOException e) {
             e.printStackTrace();

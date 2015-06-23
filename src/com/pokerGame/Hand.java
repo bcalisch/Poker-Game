@@ -3,6 +3,7 @@ package com.pokerGame;
 
 import java.util.List;
 import java.util.Collections;
+import java.util.ArrayList;
 
 /**
  * Created by benjamin on 6/22/15.
@@ -17,14 +18,13 @@ public class Hand{
     private String handName = null;
     private boolean flush = false;
     private List<String> cardsString;
-    private List<Integer> cardsInt;
+    private List<Integer> cardsInt = new ArrayList<Integer>();
 
-    public Hand(List<String> String1){
-        cardsString = String1;
+    public Hand(List<String> playerHand){
+        cardsString = playerHand;
     }
     public int convertList(){
-        //this.cardsString.add(3, " this");
-        for (int i = 0; i < this.cardsString.size(); i++) {
+         for (int i = 0; i < this.cardsString.size(); i++) {
             String temp = this.cardsString.get(i);
             temp = temp.substring(0,1);
 
@@ -45,8 +45,9 @@ public class Hand{
             cardsInt.add(i, holder);
             Collections.sort(cardsInt);
 
-            System.out.println("cardsInt = " + cardsInt);
+
         }
+        System.out.println("cardsInt = " + cardsInt);
 
         return 0;
     }
